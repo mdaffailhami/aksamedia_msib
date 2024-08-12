@@ -1,3 +1,4 @@
+import 'package:aksamedia_msib/components/share_product_sheet.dart';
 import 'package:aksamedia_msib/constants.dart';
 import 'package:aksamedia_msib/models/product.dart';
 import 'package:aksamedia_msib/utils/format_rupiah.dart';
@@ -126,7 +127,12 @@ class MyProductCard extends StatelessWidget {
                   SizedBox(
                     width: double.infinity,
                     child: MyFilledButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        showModalBottomSheet(
+                          context: context,
+                          builder: (_) => const MyShareProductSheet(),
+                        );
+                      },
                       color: primaryColor,
                       child: const Text(
                         'Bagikan Produk',

@@ -1,5 +1,6 @@
 import 'package:aksamedia_msib/constants.dart';
 import 'package:aksamedia_msib/cubits/carousel_index_cubit.dart';
+import 'package:aksamedia_msib/screens/product.dart';
 import 'package:aksamedia_msib/widgets/filled_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -74,7 +75,19 @@ class _MyIntroBodyState extends State<MyIntroBody> {
                   color: primaryColor,
                   text: 'Selanjutnya',
                   onPressed: () {
-                    context.read<MyCarouselIndexCubit>().increment();
+                    final carouselIndexCubit =
+                        context.read<MyCarouselIndexCubit>();
+
+                    if (carouselIndexCubit.state == 2) {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => const MyProductScreen(),
+                        ),
+                      );
+                    } else {
+                      carouselIndexCubit.increment();
+                    }
                   },
                 ),
               ),

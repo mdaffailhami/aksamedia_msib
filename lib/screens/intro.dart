@@ -1,5 +1,6 @@
 import 'package:aksamedia_msib/components/intro_body.dart';
 import 'package:aksamedia_msib/components/intro_carousel.dart';
+import 'package:aksamedia_msib/screens/product.dart';
 import 'package:flutter/material.dart';
 
 class MyIntroScreen extends StatefulWidget {
@@ -23,7 +24,14 @@ class _MyIntroScreenState extends State<MyIntroScreen> {
               top: 12,
               right: 10,
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => const MyProductScreen(),
+                    ),
+                  );
+                },
                 child: Text(
                   'Lewati',
                   style: Theme.of(context)

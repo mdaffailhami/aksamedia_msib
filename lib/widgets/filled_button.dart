@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 class MyFilledButton extends StatelessWidget {
   const MyFilledButton({
     super.key,
-    required this.color,
-    required this.text,
     required this.onPressed,
+    required this.color,
+    required this.child,
   });
 
-  final Color color;
-  final String text;
   final void Function() onPressed;
+  final Color color;
+  final Widget? child;
 
   @override
   Widget build(BuildContext context) {
@@ -18,11 +18,11 @@ class MyFilledButton extends StatelessWidget {
       style: FilledButton.styleFrom(
         backgroundColor: color,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(10),
         ),
       ),
       onPressed: () => onPressed(),
-      child: Text(text),
+      child: child,
     );
   }
 }

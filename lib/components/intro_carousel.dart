@@ -54,6 +54,7 @@ class _MyIntroCarouselState extends State<MyIntroCarousel> {
                 builder: (context, state) {
                   return MyCarouselIndicator(
                     index: state,
+                    totalSlides: 3,
                     onTap: (index) => _changeSlide(index),
                   );
                 },

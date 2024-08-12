@@ -73,7 +73,7 @@ class _MyIntroBodyState extends State<MyIntroBody> {
                 height: 40,
                 child: MyFilledButton(
                   color: primaryColor,
-                  text: 'Selanjutnya',
+                  child: const Text('Selanjutnya'),
                   onPressed: () {
                     final carouselIndexCubit =
                         context.read<MyCarouselIndexCubit>();

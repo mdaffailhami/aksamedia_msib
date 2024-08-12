@@ -1,3 +1,4 @@
+import 'package:aksamedia_msib/components/share_product_sheet.dart';
 import 'package:aksamedia_msib/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -31,8 +32,14 @@ class MyProductInfo extends StatelessWidget {
           ),
         ),
         IconButton(
-          onPressed: () {},
+          onPressed: () {
+            showModalBottomSheet(
+              context: context,
+              builder: (_) => const MyShareProductSheet(),
+            );
+          },
           icon: const Icon(Icons.share_outlined),
+          tooltip: 'Bagikan produk',
         )
       ],
     );
@@ -97,7 +104,7 @@ class MyProductInfo extends StatelessWidget {
     );
 
     final commission = Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: secondaryColor,
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(10),
@@ -108,7 +115,7 @@ class MyProductInfo extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 8),
         child: Center(
           child: RichText(
-            text: TextSpan(
+            text: const TextSpan(
               style: TextStyle(color: Color(0xFF363939)),
               children: [
                 TextSpan(text: 'Komisi '),

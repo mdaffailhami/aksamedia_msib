@@ -4,10 +4,12 @@ class MyCarouselIndicator extends StatelessWidget {
   const MyCarouselIndicator({
     super.key,
     required this.index,
+    required this.totalSlides,
     required this.onTap,
   });
 
   final int index;
+  final int totalSlides;
   final void Function(int index) onTap;
 
   @override
@@ -15,7 +17,7 @@ class MyCarouselIndicator extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: List.generate(
-        3,
+        totalSlides,
         (i) => Padding(
           padding: const EdgeInsets.symmetric(horizontal: 5),
           child: GestureDetector(

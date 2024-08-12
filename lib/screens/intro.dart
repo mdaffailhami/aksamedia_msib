@@ -1,7 +1,5 @@
 import 'package:aksamedia_msib/components/intro_body.dart';
 import 'package:aksamedia_msib/components/intro_carousel.dart';
-import 'package:aksamedia_msib/constants.dart';
-import 'package:aksamedia_msib/widgets/filled_button.dart';
 import 'package:flutter/material.dart';
 
 class MyIntroScreen extends StatefulWidget {

@@ -20,7 +20,7 @@ class MyProductScreen extends StatelessWidget {
           children: [
             CustomScrollView(
               slivers: [
-                const MyAppBar(),
+                const MyProductCarousel(),
                 SliverList(
                   delegate: SliverChildListDelegate([
                     const MyProductInfo(),

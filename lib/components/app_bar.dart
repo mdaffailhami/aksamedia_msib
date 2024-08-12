@@ -3,14 +3,14 @@ import 'package:aksamedia_msib/widgets/carousel_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class MyAppBar extends StatefulWidget {
-  const MyAppBar({super.key});
+class MyProductCarousel extends StatefulWidget {
+  const MyProductCarousel({super.key});
 
   @override
-  State<MyAppBar> createState() => _MyAppBarState();
+  State<MyProductCarousel> createState() => _MyProductCarouselState();
 }
 
-class _MyAppBarState extends State<MyAppBar> {
+class _MyProductCarouselState extends State<MyProductCarousel> {
   final _carouselController = PageController(initialPage: 0, keepPage: false);
 
   void _changeSlide(int index) {
@@ -23,19 +23,22 @@ class _MyAppBarState extends State<MyAppBar> {
 
   @override
   Widget build(BuildContext context) {
+    const height = 380.0;
+
     return SliverLayoutBuilder(
       builder: (context, constraints) {
-        final isScrolled = constraints.scrollOffset > 300 - kToolbarHeight - 10;
+        final isScrolled =
+            constraints.scrollOffset > height - kToolbarHeight - 10;
         final iconColor = isScrolled ? Colors.black : Colors.white;
 
         return SliverAppBar(
           pinned: true,
           floating: false,
-          expandedHeight: 300,
+          expandedHeight: height,
           surfaceTintColor: Colors.transparent,
           backgroundColor: Colors.white,
           automaticallyImplyLeading: false,
-          title: isScrolled ? Text('Beauty Set by Irvie') : null,
+          title: isScrolled ? const Text('Beauty Set by Irvie') : null,
           leading: IconButton(
             onPressed: () => Navigator.of(context).pop(),
             icon: Icon(

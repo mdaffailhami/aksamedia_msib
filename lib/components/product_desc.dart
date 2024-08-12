@@ -32,6 +32,7 @@ class _MyProductDescState extends State<MyProductDesc> {
               IconButton(
                 onPressed: () => copyText(context, _description),
                 icon: const Icon(Icons.copy_rounded, color: infoColor),
+                tooltip: 'Salin deskripsi',
               ),
             ],
           ),
@@ -55,7 +56,7 @@ class _MyProductDescState extends State<MyProductDesc> {
               children: [
                 Text(
                   _descMaxLines == null ? 'Secukupnya' : 'Selengkapnya',
-                  style: TextStyle(color: infoColor),
+                  style: const TextStyle(color: infoColor),
                 ),
                 Icon(
                     _descMaxLines == null

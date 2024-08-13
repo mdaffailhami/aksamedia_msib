@@ -1,3 +1,9 @@
+![](https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif)
+
+**Note:** HTTP Serve the `RESULT` directory to open the application (e.g. _localhost_).
+
+![](https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif)
+
 # Aksamedia MSIB
 
 Aksamedia MSIB is a project developed as part of the application process for a mobile Flutter developer internship at Aksamedia. This project serves as a demonstration of my skills in Flutter development, showcasing my ability to create functional and aesthetically pleasing mobile applications. It includes features and functionalities relevant to the internship requirements, providing a practical example of my expertise in mobile development.

@@ -7,6 +7,7 @@ class MyShareProductSheet extends StatelessWidget {
   Widget build(BuildContext context) {
     return BottomSheet(
       onClosing: () {},
+      backgroundColor: Colors.white,
       builder: (context) {
         return Padding(
           padding: const EdgeInsets.all(12),

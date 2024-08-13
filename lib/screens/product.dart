@@ -21,19 +21,24 @@ class MyProductScreen extends StatelessWidget {
             CustomScrollView(
               slivers: [
                 const MyProductCarousel(),
-                SliverList(
-                  delegate: SliverChildListDelegate([
-                    const MyProductInfo(),
-                    const SizedBox(height: 20),
-                    const MyProductVariants(),
-                    const SizedBox(height: 10),
-                    const Divider(),
-                    const MyProductDesc(),
-                    const Divider(),
-                    const SizedBox(height: 10),
-                    const MyOtherProductList(),
-                    const SizedBox(height: 68),
-                  ]),
+                DecoratedSliver(
+                  decoration: const BoxDecoration(
+                    color: Colors.white,
+                  ),
+                  sliver: SliverList(
+                    delegate: SliverChildListDelegate([
+                      const MyProductInfo(),
+                      const SizedBox(height: 20),
+                      const MyProductVariants(),
+                      const SizedBox(height: 10),
+                      const Divider(),
+                      const MyProductDesc(),
+                      const Divider(),
+                      const SizedBox(height: 10),
+                      const MyOtherProductList(),
+                      const SizedBox(height: 68),
+                    ]),
+                  ),
                 )
               ],
             ),

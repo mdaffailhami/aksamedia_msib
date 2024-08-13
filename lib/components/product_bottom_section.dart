@@ -25,7 +25,10 @@ class MyProductBottomSection extends StatelessWidget {
                   child: MyOutlinedButton(
                     onPressed: () {},
                     color: Colors.white,
-                    child: const Text('Tambahkan ke toko'),
+                    child: const Text(
+                      'Tambahkan ke toko',
+                      style: TextStyle(color: Colors.black),
+                    ),
                   ),
                 ),
               ),
